@@ -1,0 +1,193 @@
+// 🎵 Play Music
+function playMusic() {
+    const music = document.getElementById("music");
+
+    music.play().catch(() => {
+        alert("Tap the Play Music button once to start the music. 🎵");
+    });
+}
+
+// ⏳ Countdown to 9 January
+function updateCountdown() {
+
+    const now = new Date();
+
+    let year = now.getFullYear();
+
+    let birthday = new Date(year, 0, 9); // January = 0
+
+    if (now > birthday) {
+        birthday = new Date(year + 1, 0, 9);
+    }
+
+    const diff = birthday - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+  
+    const timer = document.getElementById("timer");
+
+if (timer) {
+    timer.innerHTML =
+        `${days} Days<br>${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+}
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ✨ Floating Hearts
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = window.innerHeight + "px";
+    heart.style.fontSize = (20 + Math.random() * 20) + "px";
+    heart.style.pointerEvents = "none";
+    heart.style.transition = "transform 6s linear, opacity 6s linear";
+    heart.style.opacity = "1";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.style.transform = "translateY(-120vh)";
+        heart.style.opacity = "0";
+    }, 50);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 800);
+
+// 🎉 Welcome Message
+window.onload = function () {
+    alert("👑 Welcome to AYANVERSE 💛");
+};
+function showGift() {
+    const gift = document.getElementById("giftText");
+
+    gift.innerHTML = `
+    🎉 Happy Birthday Ayan! 🎂<br>
+    ❤️ Dream Big<br>
+    😊 Keep Smiling<br>
+    💻 You Will Become A Great Coder 🚀
+    `;
+
+    gift.style.display = "block";
+    gift.style.opacity = "0";
+    gift.style.transform = "scale(0.8)";
+
+    setTimeout(() => {
+        gift.style.transition = "all 0.8s ease";
+        gift.style.opacity = "1";
+        gift.style.transform = "scale(1)";
+    }, 100);
+}
+function fireworks() {
+
+    const box = document.getElementById("fireworks");
+
+    for(let i=0;i<80;i++){
+
+        const s=document.createElement("div");
+        s.className="spark";
+
+        s.style.background=
+        `hsl(${Math.random()*360},100%,60%)`;
+
+        s.style.left="50%";
+        s.style.top="50%";
+
+        s.style.setProperty("--x",
+        (Math.random()*600-300)+"px");
+
+        s.style.setProperty("--y",
+        (Math.random()*600-300)+"px");
+
+        box.appendChild(s);
+
+        setTimeout(()=>s.remove(),1200);
+    }
+}
+
+function confettiRain(){
+
+    const box=document.getElementById("confetti");
+
+    const emoji=["🎉","🎊","🎈","✨","🎂","🎁","💖"];
+
+    for(let i=0;i<60;i++){
+
+        const c=document.createElement("div");
+
+        c.className="confetti";
+
+        c.innerHTML=
+        emoji[Math.floor(Math.random()*emoji.length)];
+
+        c.style.left=Math.random()*100+"vw";
+
+        c.style.animationDelay=
+        Math.random()*2+"s";
+
+        box.appendChild(c);
+
+        setTimeout(()=>c.remove(),4000);
+    }
+}
+window.onload = function () {
+
+    alert("👑 Welcome to AYANVERSE 💛");
+
+    const btn = document.querySelector(".gift button");
+
+    if (btn) {
+        btn.addEventListener("click", () => {
+            showGift();
+            fireworks();
+            confettiRain();
+            document.body.style.animation = "flash 0.5s 2";
+navigator.vibrate?.([200,100,200]);
+
+const gift = document.getElementById("giftText");
+
+if (gift) {
+    gift.animate([
+        { transform: "scale(0)" },
+        { transform: "scale(1.2)" },
+        { transform: "scale(1)" }
+    ], {
+        duration: 700,
+        easing: "ease-out"
+    });
+}
+  document.body.classList.add("shake");
+
+setTimeout(() => {
+    document.body.classList.remove("shake");
+}, 500); });
+  }
+};
+const title = document.getElementById("typing");
+
+if (title) {
+    const text = "👑 Welcome To AYANVERSE 👑";
+    let i = 0;
+
+    function typeEffect() {
+        if (i < text.length) {
+            title.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, 100);
+        }
+    }
+
+    window.addEventListener("load", typeEffect);
+        }
