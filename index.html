@@ -1,73 +1,86 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYANVERSE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>👑 AYANVERSE 👑</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div id="stars"></div>
-<div id="fireworks"></div>
-<div id="confetti"></div>
 
 <header>
-    <h1 id="typing"></h1>
-    <p>💛 Welcome To AYANVERSE 💛</p>
+
+<h1 id="typing" class="glow"></h1>
+
+<p>✨ Welcome To My World ✨</p>
+
 </header>
 
 <section class="hero">
 
-    <img src="profile.png" alt="Profile">
+<img src="https://i.ibb.co/WpNm5bPr/file-00000000d5d481fd9b5197e7effe109c.png" class="profile">
 
-    <h2>Ayan Sangma</h2>
+<h2>❤️ Ayan ❤️</h2>
 
-    <h3>🎂 Happy Birthday 🎂</h3>
+<h3>🎂 Birthday Coming Soon 🎂</h3>
 
-    <h4>Dream Big 🚀</h4>
+<h4>📅 9 January</h4>
 
-    <p>
-        Believe in Yourself 💪 <br>
-        Never Give Up 🚀
-    </p>
+<p>
+Dream Big ❤️<br>
+Believe in Yourself 💪<br>
+Never Give Up 🚀
+</p>
 
-    <button onclick="playMusic()">
-        🎵 Play My Favourite Song
-    </button>
+<button onclick="playMusic()">
+🎵 Play My Favourite Song
+</button>
+
+<audio id="music" loop>
+<source src="https://files.catbox.moe/exfwhp.m4a" type="audio/mp4">
+</audio>
 
 </section>
 
 <section class="countdown">
-    <h2>⏳ Countdown</h2>
 
-    <div id="timer"></div>
+<h2>⏳ Countdown</h2>
+
+<div id="timer">
+Loading...
+</div>
+
 </section>
 
 <section class="quote">
-    💖 Quote 💖 <br>
-    "The future belongs to those who never stop learning."
-</section>
 
+<h2>💖 Quote 💖</h2>
+
+<p>
+
+"The future belongs to those who never stop learning."
+
+</p>
+
+</section>
 <section class="gift">
-    <h2>🎁 Surprise 🎁</h2>
+  <h2>🎁 Surprise 🎁</h2>
 
-    <button>
-        🎉 Open My Birthday Gift 🎉
-    </button>
+  <button onclick="showGift()">
+    🎉 Open My Birthday Gift 🎉
+  </button>
 
-    <div id="giftText"></div>
+  <p id="giftText"></p>
 </section>
-
 <footer>
-    Made with ❤️ by Ayan | © 2026 AYANVERSE
+  Made with ❤️ by <b>Ayan</b> | © 2026 AYANVERSE
 </footer>
-
-<audio id="music" loop>
-    <source src="Ed_Sheeran_-_Perfect(48k).m4a" type="audio/mp4">
-</audio>
-
+<div id="fireworks"></div>
+<div id="confetti"></div>
 <script src="script.js"></script>
 
 </body>
