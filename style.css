@@ -1,0 +1,263 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000428);
+background-size:400% 400%;
+animation:bg 15s ease infinite;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+header{
+padding:40px;
+}
+
+header h1{
+font-size:55px;
+color:#00e5ff;
+text-shadow:0 0 20px cyan;
+}
+
+header p{
+font-size:24px;
+margin-top:10px;
+color:#ffd700;
+}
+
+.hero{
+width:90%;
+max-width:800px;
+margin:30px auto;
+padding:30px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+
+.profile{
+width:260px;
+height:260px;
+border-radius:50%;
+border:6px solid white;
+object-fit:cover;
+box-shadow:0 0 30px cyan;
+transition:.5s;
+}
+
+.profile:hover{
+transform:scale(1.08) rotate(5deg);
+box-shadow:0 0 50px #00e5ff;
+}
+
+.hero h2{
+margin-top:20px;
+font-size:38px;
+color:#ffeb3b;
+}
+
+.hero h3{
+margin:10px;
+font-size:30px;
+}
+
+.hero h4{
+font-size:24px;
+color:#00ffcc;
+}
+
+.hero p{
+margin:25px;
+font-size:22px;
+line-height:1.8;
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:#ff1744;
+color:white;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#d50000;
+}
+
+.countdown{
+margin:50px auto;
+padding:25px;
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.08);
+border-radius:20px;
+}
+
+#timer{
+font-size:38px;
+font-weight:bold;
+color:#00ffcc;
+margin-top:20px;
+}
+
+.quote{
+margin:50px;
+font-size:24px;
+font-style:italic;
+color:#ffd700;
+}
+
+footer{
+padding:30px;
+font-size:18px;
+color:#ddd;
+}
+
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-image:
+radial-gradient(white 1px,transparent 1px);
+background-size:50px 50px;
+opacity:.3;
+z-index:-1;
+animation:starsMove 40s linear infinite;
+}
+
+@keyframes starsMove{
+from{
+transform:translateY(0);
+};
+to{
+transform:translateY(-500px);
+}
+}
+.gift{
+  margin:50px auto;
+  width:90%;
+  max-width:700px;
+  background:rgba(255,255,255,.08);
+  padding:25px;
+  border-radius:20px;
+}
+
+.gift button{
+  background:#ff0066;
+  color:white;
+  border:none;
+  padding:15px 30px;
+  border-radius:30px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+#giftText{
+  margin-top:20px;
+  font-size:22px;
+  color:#ffd700;
+  font-weight:bold;
+}
+#fireworks,
+#confetti{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.spark{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    animation:boom 1.2s linear forwards;
+}
+
+.confetti{
+    position:absolute;
+    font-size:24px;
+    animation:fall 4s linear forwards;
+}
+
+@keyframes boom{
+    0%{
+        transform:scale(0);
+        opacity:1;
+    }
+    100%{
+        transform:translate(var(--x),var(--y)) scale(2);
+        opacity:0;
+    }
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+@keyframes flash {
+  0%,100% {
+    background: #243b4a;
+  }
+  50% {
+    background: #ff69b4;
+  }
+}
+.shake{
+    animation: shake 0.5s;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-8px);}
+    40%{transform:translateX(8px);}
+    60%{transform:translateX(-8px);}
+    80%{transform:translateX(8px);}
+    100%{transform:translateX(0);}
+}
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+
+.flash {
+  animation: flash 0.5s;
+}
+
+@keyframes flash {
+  0% { background: white; }
+  100% { background: transparent; }
+  }
